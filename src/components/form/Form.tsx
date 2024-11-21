@@ -27,7 +27,7 @@ export default function Form({fetchWeather}: FormProps) {
         e.preventDefault();
 
         if (Object.values(search).includes('')) {
-            setAlert("Todos los campos son obligatorios");
+            setAlert("All fields are required");
             return;
         }
 
@@ -47,7 +47,7 @@ export default function Form({fetchWeather}: FormProps) {
                     id="city"
                     type="text"
                     name="city"
-                    placeholder="Ciudad"
+                    placeholder="City"
                     value={search.city}
                     onChange={handleChange}
                 />
@@ -76,7 +76,7 @@ export default function Form({fetchWeather}: FormProps) {
                 </select>
             </div>
 
-            <input className={styles.submit} type="submit" value="Consultar Clima"/>
+            <input className={styles.submit} type="submit" value="Consult Weather"/>
         </form>
     );
 }
